@@ -30,17 +30,25 @@ widgets    : [mathjax, quiz, bootstrap]
 
 --- 
 
+## Animation (it can work)
+
+I know this can work because I see it here:
+http://mages.github.io/Introduction_to_googleVis/#18
+
+
+---
+
 ## googleVis
 
 <!-- MotionChart generated in R 3.0.1 by googleVis 0.4.5 package -->
-<!-- Tue Sep 10 21:41:44 2013 -->
+<!-- Tue Sep 10 22:16:19 2013 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID2cdc3ccf278d () {
+function gvisDataMotionChartID143c1aec38a3 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -138,14 +146,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID2cdc3ccf278d() {
-var data = gvisDataMotionChartID2cdc3ccf278d();
+function drawChartMotionChartID143c1aec38a3() {
+var data = gvisDataMotionChartID143c1aec38a3();
 var options = {};
 options["width"] =    500;
 options["height"] =    350;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID2cdc3ccf278d')
+    document.getElementById('MotionChartID143c1aec38a3')
     );
     chart.draw(data,options);
     
@@ -169,9 +177,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID2cdc3ccf278d);
+callbacks.push(drawChartMotionChartID143c1aec38a3);
 })();
-function displayChartMotionChartID2cdc3ccf278d() {
+function displayChartMotionChartID143c1aec38a3() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -195,19 +203,32 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID2cdc3ccf278d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID143c1aec38a3"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID2cdc3ccf278d"
+<div id="MotionChartID143c1aec38a3"
   style="width: 500px; height: 350px;">
 </div>
 
 
+---
+
+## googleVis (it can work)
+
+I once made slides using slidify and included a very similar animation, however I manually changed/added paths in the html file (I think) and can't even recreate it.  What is the proper way to add this animation (creating it time is a bad idea because there are so many images to create).
+
+https://dl.dropboxusercontent.com/u/61803503/presentations/animation_test/test2.html#5.0
+
 --- 
+
+## session info
+
+see: `session.info.txt`
 
 
 ```r
+sink(file = "session.info.txt")
 sessionInfo()
 ```
 
@@ -235,5 +256,9 @@ sessionInfo()
 ##  [5] markdown_0.6.3 RCurl_1.95-4.1 rJava_0.9-4    RJSONIO_1.0-3 
 ##  [9] stringr_0.6.2  tools_3.0.1    whisker_0.3-2  xlsx_0.5.1    
 ## [13] xlsxjars_0.5.0 XML_3.98-1.1   xtable_1.7-1   yaml_2.1.7
+```
+
+```r
+sink()
 ```
 

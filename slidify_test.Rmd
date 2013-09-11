@@ -37,6 +37,14 @@ lapply(packs, library, character.only = TRUE)
 
 --- 
 
+## Animation (it can work)
+
+I know this can work because I see it here:
+http://mages.github.io/Introduction_to_googleVis/#18
+
+
+---
+
 ## googleVis
 
 ```{r results="asis", echo=FALSE}
@@ -44,8 +52,22 @@ M <- gvisMotionChart(Fruits, "Fruit", "Year", options = list(width = 500, height
 print(M, "chart")
 ```
 
+---
+
+## googleVis (it can work)
+
+I once made slides using slidify and included a very similar animation, however I manually changed/added paths in the html file (I think) and can't even recreate it.  What is the proper way to add this animation (creating it time is a bad idea because there are so many images to create).
+
+https://dl.dropboxusercontent.com/u/61803503/presentations/animation_test/test2.html#5.0
+
 --- 
 
+## session info
+
+see: `session.info.txt`
+
 ```{r}
+sink(file="session.info.txt")
 sessionInfo()
+sink()
 ```

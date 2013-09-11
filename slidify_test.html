@@ -75,19 +75,31 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
+    <h2>Animation (it can work)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I know this can work because I see it here:
+<a href="http://mages.github.io/Introduction_to_googleVis/#18">http://mages.github.io/Introduction_to_googleVis/#18</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
     <h2>googleVis</h2>
   </hgroup>
   <article data-timings="">
     <!-- MotionChart generated in R 3.0.1 by googleVis 0.4.5 package -->
 
-<!-- Tue Sep 10 21:41:44 2013 -->
+<!-- Tue Sep 10 22:16:19 2013 -->
 
 <!-- jsHeader -->
 
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID2cdc3ccf278d () {
+function gvisDataMotionChartID143c1aec38a3 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -185,14 +197,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID2cdc3ccf278d() {
-var data = gvisDataMotionChartID2cdc3ccf278d();
+function drawChartMotionChartID143c1aec38a3() {
+var data = gvisDataMotionChartID143c1aec38a3();
 var options = {};
 options["width"] =    500;
 options["height"] =    350;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID2cdc3ccf278d')
+    document.getElementById('MotionChartID143c1aec38a3')
     );
     chart.draw(data,options);
     
@@ -216,9 +228,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID2cdc3ccf278d);
+callbacks.push(drawChartMotionChartID143c1aec38a3);
 })();
-function displayChartMotionChartID2cdc3ccf278d() {
+function displayChartMotionChartID143c1aec38a3() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -244,12 +256,12 @@ callbacks.shift()();
 
 <!-- jsChart -->  
 
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID2cdc3ccf278d"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID143c1aec38a3"></script>
  
 
 <!-- divChart -->
 
-<div id="MotionChartID2cdc3ccf278d"
+<div id="MotionChartID143c1aec38a3"
   style="width: 500px; height: 350px;">
 </div>
 
@@ -257,9 +269,28 @@ callbacks.shift()();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>googleVis (it can work)</h2>
+  </hgroup>
   <article data-timings="">
-    <pre><code class="r">sessionInfo()
+    <p>I once made slides using slidify and included a very similar animation, however I manually changed/added paths in the html file (I think) and can&#39;t even recreate it.  What is the proper way to add this animation (creating it time is a bad idea because there are so many images to create).</p>
+
+<p><a href="https://dl.dropboxusercontent.com/u/61803503/presentations/animation_test/test2.html#5.0">https://dl.dropboxusercontent.com/u/61803503/presentations/animation_test/test2.html#5.0</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>session info</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>see: <code>session.info.txt</code></p>
+
+<pre><code class="r">sink(file = &quot;session.info.txt&quot;)
+sessionInfo()
 </code></pre>
 
 <pre><code>## R version 3.0.1 (2013-05-16)
@@ -287,6 +318,9 @@ callbacks.shift()();
 ## [13] xlsxjars_0.5.0 XML_3.98-1.1   xtable_1.7-1   yaml_2.1.7
 </code></pre>
 
+<pre><code class="r">sink()
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -303,14 +337,26 @@ callbacks.shift()();
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='googleVis'>
+        data-slide=2 title='Animation (it can work)'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title=''>
+        data-slide=3 title='googleVis'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='googleVis (it can work)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='session info'>
+         5
       </a>
     </li>
   </ul>
