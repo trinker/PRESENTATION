@@ -1,0 +1,51 @@
+---
+title      : slidify_test
+subtitle   : 
+author     : Tyler Rinker
+job        : 
+logo       : 
+biglogo    : 
+license    : 
+framework  : io2012
+highlighter: highlight.js
+hitheme    : tomorrow
+mode       : selfcontained
+widgets    : [mathjax, quiz, bootstrap]
+---
+```{r setup, include=FALSE}
+# set global chunk options
+opts_chunk$set(cache=FALSE)
+opts_knit$set(message=FALSE)
+options(gvis.plot.tag="chart")
+packs <- c("reports", "slidify", "slidifyLibraries", "knitr", "knitcitations", 
+    "googleVis")
+lapply(packs, library, character.only = TRUE)
+```
+
+## Animation
+
+	<div class="scianimator"><div id="Rplot" style="display: inline-block;"></div></div>
+	<script src="js/Rplot.js"></script>
+<!-- highlight R code -->
+<script type="text/javascript">
+	SyntaxHighlighter.autoloader(
+	  "r    js/shBrushR.js"
+	);
+	SyntaxHighlighter.defaults["toolbar"] = false;
+	SyntaxHighlighter.all();
+</script>
+
+--- 
+
+## googleVis
+
+```{r results="asis", echo=FALSE}
+M <- gvisMotionChart(Fruits, "Fruit", "Year", options = list(width = 500, height = 350))
+print(M, "chart")
+```
+
+--- 
+
+```{r}
+sessionInfo()
+```
